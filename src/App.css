@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Fallback fonts */
 }
 
 .App-logo {

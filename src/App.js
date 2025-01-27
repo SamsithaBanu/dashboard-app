@@ -1,11 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import { AppStyled } from "./styles/AppStyled";
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello</h1>
-    </div>
+    <AppStyled>
+      <div className="appWrapper">
+        <Sidebar />
+        <div className="rightWrapper">
+          <Header />
+        </div>
+      </div>
+    </AppStyled>
   );
 }
 
