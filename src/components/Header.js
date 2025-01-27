@@ -34,7 +34,7 @@ const Header = () => {
           <img
             src={book}
             alt="booking"
-            style={{ width: "25px", height: "25px" }}
+            style={{ width: "23px", height: "23px" }}
           />
           <img
             src={bell}

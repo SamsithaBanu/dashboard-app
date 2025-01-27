@@ -9,6 +9,7 @@ export const AppStyled = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
+      background: #F7F9FB;
     }
   }
 `;

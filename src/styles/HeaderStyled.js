@@ -45,7 +45,7 @@ export const HeaderStyled = styled.div`
     .iconWrapper {
       display: flex;
       flex-direction: row;
-      gap: 10px;
+      gap: 15px;
     }
     .userWrapper {
       display: flex;
