@@ -14,11 +14,26 @@ const Purchase = () => {
                   <div className="title">{item?.title}</div>
                   <div className="amount">
                     {item?.amount}
-                    <span>{item?.increment}</span>
+                    {item?.increment && (
+                      <img
+                        src={item?.increment}
+                        alt="amount"
+                        style={{
+                          width: "47px",
+                          height: "17px",
+                          marginLeft: "5px",
+                          marginBottom: "-4px",
+                        }}
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="rightContent">
-                  <img src={item?.icon} alt={item?.title} style={{width: '34px', height:'34px'}}/>
+                  <img
+                    src={item?.icon}
+                    alt={item?.title}
+                    style={{ width: "34px", height: "34px" }}
+                  />
                 </div>
               </div>
               <div className="bottomContent">{item?.paymentDue}</div>

@@ -4,7 +4,7 @@ export const AppStyled = styled.div`
   .appWrapper {
     display: flex;
     flex-direction: row;
-    font-family: "Proxima Nova", Arial, sans-serif; /* Fallback fonts */
+    font-family: 'Proxima Nova', Arial, sans-serif; /* Fallback fonts */
     .rightWrapper {
       display: flex;
       flex-direction: column;

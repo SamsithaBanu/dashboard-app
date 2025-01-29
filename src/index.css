@@ -1,11 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Fallback fonts */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Fallback fonts */
 }

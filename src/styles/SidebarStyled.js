@@ -7,6 +7,7 @@ export const SidebarStyled = styled.div`
   flex-direction: column;
   align-items: center;
   .sidebarWrapper {
+    position: fixed;
     .logo {
       width: 40px;
       height: 40px;
