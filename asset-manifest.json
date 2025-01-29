@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dashboard-app/static/css/main.399805fc.css",
+    "main.js": "/dashboard-app/static/js/main.724df25d.js",
+    "static/js/453.d67644d7.chunk.js": "/dashboard-app/static/js/453.d67644d7.chunk.js",
+    "static/media/image 9.png": "/dashboard-app/static/media/image 9.e01dcd30ea6aa5c9bb9f.png",
+    "static/media/truck.png": "/dashboard-app/static/media/truck.53287f8208602703681c.png",
+    "index.html": "/dashboard-app/index.html",
+    "main.399805fc.css.map": "/dashboard-app/static/css/main.399805fc.css.map",
+    "main.724df25d.js.map": "/dashboard-app/static/js/main.724df25d.js.map",
+    "453.d67644d7.chunk.js.map": "/dashboard-app/static/js/453.d67644d7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.399805fc.css",
+    "static/js/main.724df25d.js"
+  ]
+}
