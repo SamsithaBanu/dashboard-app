@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { HeaderStyled } from "../styles/HeaderStyled";
 import bookmark from "../SidebarIcons/HeaderIcons/IconSet.png";
 import search from "../SidebarIcons/HeaderIcons/Search.png";
@@ -7,7 +7,15 @@ import book from "../SidebarIcons/HeaderIcons/Vector.png";
 import bell from "../SidebarIcons/HeaderIcons/Bell.png";
 import user from "../SidebarIcons/HeaderIcons/user.png";
 
-const Header = () => {
+const Header = ({onChange}) => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+    // localStorage.setItem("theme", theme);
+  }, [theme]);
+  console.log('theme', theme)
+
   return (
     <HeaderStyled>
       <div className="leftWrapper">
@@ -30,6 +38,13 @@ const Header = () => {
         </div>
       </div>
       <div className="rightsideWrapper">
+        <button className='themeMode' onClick={() => {
+          localStorage.setItem('theme',theme === "light" ? "dark" : "light")
+          setTheme(theme === "light" ? "dark" : "light");
+          onChange(theme === "light" ? "Dark" : "Light");
+        }}>
+          Switch to {theme === "light" ? "Dark" : "Light"} Mode
+        </button>
         <div className="iconWrapper">
           <img
             src={book}

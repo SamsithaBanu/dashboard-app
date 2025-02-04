@@ -4,7 +4,8 @@ export const ShipmentStyled = styled.div`
 .shipmentWrapper{
     border: 1px solid #E5E5E5;
     border-radius: 8px;
-    background: white;
+    background-color: var(--primary-bg);
+    color: var(--text-color);  
     padding: 10px;
     margin: 7px;
     display: flex;
@@ -37,6 +38,7 @@ export const ShipmentStyled = styled.div`
                     font-weight: 700;
                     font-size: 12px;
                     line-height: 16px;
+                    color: black;
                 }
             }
         }
@@ -50,7 +52,7 @@ export const ShipmentStyled = styled.div`
                 gap: 10px;
                 padding:8px;
                 .boxWrapper{
-                    background: #F7F9FB;
+                    background: var(--secondary-bg);
                     border-radius: 8px;
                     display: flex;
                     flex-direction: column;
@@ -146,7 +148,7 @@ export const ShipmentStyled = styled.div`
                     font-size:14px;
                     line-height: 17px;
                     font-weight: 600;
-                    color: black;
+                    color: var(--text-color);  
                     margin-top:10px;
                 }
             }

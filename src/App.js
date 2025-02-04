@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import BottomComponent from "./components/BottomComponent";
 import Header from "./components/Header";
@@ -8,15 +9,16 @@ import Sidebar from "./components/Sidebar";
 import { AppStyled } from "./styles/AppStyled";
 
 function App() {
+  const [storage, setstorage] = useState("");
   return (
     <AppStyled>
       <div className="appWrapper">
         <Sidebar />
         <div className="rightWrapper">
-          <Header />
+          <Header onChange={(item) => setstorage(item)} />
           <HeaderBelow />
           <Purchase />
-          <MiddleComponent />
+          <MiddleComponent storage={storage} />
           <BottomComponent />
         </div>
       </div>

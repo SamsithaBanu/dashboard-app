@@ -44,6 +44,14 @@ export const HeaderStyled = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    .themeMode{
+      border-radius:8px;
+      padding: 5px 8px;
+      background: white;
+      color: black;
+      height:30px;
+      border: none;
+    }
     .iconWrapper {
       display: flex;
       flex-direction: row;

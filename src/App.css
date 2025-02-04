@@ -1,14 +1,44 @@
 .App {
   text-align: center;
-  font-family: 'Proxima Nova', Arial, sans-serif; /* Fallback fonts */
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  /* Fallback fonts */
 }
+
 body {
-  font-family: 'Proxima Nova', Arial, sans-serif; /* Fallback fonts */
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  /* Fallback fonts */
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+:root {
+  --primary-bg: #fff;
+  --secondary-bg: #f7f9fb;
+  --text-color: #000000;
+  --card-color: #fff;
+  --text-color1: grey;
+  --card-bg: #ffffff;
+  --chart-color: #4f45e4;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-bg: #121212;
+  --secondary-bg: grey;
+  --text-color: #ffffff;
+  --card-color: grey;
+  --text-color1: #ffffff;
+  --card-bg: #222222;
+  --chart-color: #38c29b;
+}
+
+/* Apply Variables */
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,6 +66,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

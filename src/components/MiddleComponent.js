@@ -3,11 +3,11 @@ import { MiddleComponentStyled } from "../styles/MiddleComponentStyled";
 import ProgressBar from "./ProgressBar";
 import Shipment from "./Shipment";
 
-const MiddleComponent = () => {
+const MiddleComponent = ({storage}) => {
   return (
     <MiddleComponentStyled>
       <div className="middle-wrapper">
-        <ProgressBar />
+        <ProgressBar storage={storage}/>
         <Shipment />
       </div>
     </MiddleComponentStyled>

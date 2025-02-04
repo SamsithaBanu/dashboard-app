@@ -9,7 +9,8 @@ export const PurchaseStyled = styled.div`
     font-family: "Proxima Nova", Arial, sans-serif; /* Fallback fonts */
     .wrapper {
       border: 1px solid #e5e5e5;
-      background: #fff;
+      background: var(--card-color);
+      color: var(--text-color);
       border-radius: 8px;
       padding: 13px;
       width: 290px;
@@ -27,8 +28,8 @@ export const PurchaseStyled = styled.div`
           gap: 7px;
           .title {
             font-size: 14px;
-            font-weight: 400px;
-            color: grey;
+            font-weight: 400;
+            color: var(--text-color1);
           }
           .amount {
             color: #4f45e4;
@@ -42,7 +43,7 @@ export const PurchaseStyled = styled.div`
       .bottomContent {
         font-size: 12px;
         font-weight: 550;
-        color: grey;
+        color: var(--text-color1);
       }
     }
   }

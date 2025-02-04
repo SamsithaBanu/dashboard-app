@@ -6,7 +6,8 @@ export const BottomComponentStyled = styled.div`
   align-items: center;
   border: 1px solid #e9e9e9;
   border-radius: 8px;
-  background: white;
+  background-color: var(--primary-bg);
+  color: var(--text-color);  
   padding: 15px;
   margin: 5px 15px;
   width: 95%;
@@ -32,6 +33,7 @@ export const BottomComponentStyled = styled.div`
         border-radius: 8px;
         padding: 10px;
         background: #f7f9fb;
+        color: black;
       }
     }
   }
@@ -62,7 +64,7 @@ export const BottomComponentStyled = styled.div`
       .items {
         display: flex;
         flex-direction: row;
-        background: #f7f9fb;
+        background: var(--secondary-bg);
         border-radius: 8px;
         padding: 10px;
         margin-top: 10px;

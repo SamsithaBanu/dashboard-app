@@ -6,6 +6,7 @@ export const SidebarStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #F7F9FB;
   .sidebarWrapper {
     position: fixed;
     .logo {

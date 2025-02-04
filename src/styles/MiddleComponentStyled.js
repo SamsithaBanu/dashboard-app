@@ -7,7 +7,8 @@ export const MiddleComponentStyled = styled.div`
     .middleWrapper {
       border: 1px solid #e9e9e9;
       border-radius: 8px;
-      background: white;
+      background-color: var(--primary-bg);
+      color: var(--text-color);  
       padding: 15px;
       width: 33%;
       margin: 5px 15px;
@@ -20,7 +21,7 @@ export const MiddleComponentStyled = styled.div`
             font-size: 16px;
             line-height: 19px;
             font-weight: 700;
-            color: black;
+            color: var(--text-color);  
           }
           .subTitle {
             font-size: 12px;

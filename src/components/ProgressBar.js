@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Toggle from "./Toggle";
 import { Bar } from "react-chartjs-2";
 import { chartData, options } from "./data";
@@ -20,7 +20,36 @@ ChartJS.register(
   Legend
 );
 
-const ProgressBar = () => {
+const ProgressBar = ({ storage }) => {
+  const [modifyChartData, setModifyChartData] = useState(chartData);
+
+  useEffect(() => {
+    if (storage === "Dark") {
+      setModifyChartData((prevChartData) => {
+        const updatedChartData = {
+          ...prevChartData,
+          datasets: prevChartData.datasets.map((dataset, index) => ({
+            ...dataset,
+            backgroundColor: index === 0 ? "grey" : "white",
+          })),
+        };
+        return updatedChartData;
+      });
+    } else if (storage === "Light") {
+      setModifyChartData((prevChartData) => {
+        const updatedChartData = {
+          ...prevChartData,
+          datasets: prevChartData.datasets.map((dataset, index) => ({
+            ...dataset,
+            backgroundColor:
+              index === 0 ? "rgba(58, 53, 221, 1)" : "rgba(58, 53, 221, 0.3)",
+          })),
+        };
+        return updatedChartData;
+      });
+    }
+  }, [chartData, storage]);
+
   return (
     <div className="middleWrapper">
       <div className="topWrapper">
@@ -37,7 +66,7 @@ const ProgressBar = () => {
       <div className="middle">
         <div className="total">Total Items (in 1000s)</div>
         <div className="chartContainer">
-          <Bar data={chartData} options={options} />
+          <Bar data={modifyChartData} options={options} />
         </div>
       </div>
       <div className="bottomWrap">
