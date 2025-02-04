@@ -22,7 +22,6 @@ const BottomComponent = () => {
           <Toggle item1="SUPPLIERS" item2="CLIENTS" />
         </div>
       </div>
-      <div className="verti"></div>
       <ItemsWrapper title="Top Items Sold" items={soldItems} isFromSold />
       <ItemsWrapper title="Top Items Purchased" items={purchasedItems} />
     </BottomComponentStyled>
