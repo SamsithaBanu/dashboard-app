@@ -7,8 +7,8 @@ export const HeaderStyled = styled.div`
   align-items: center;
   background: #4f45e4;
   padding: 15px 20px;
-  width:93%;
-  position: fixed;
+  // width:93%;
+  // position: fixed;
   .leftWrapper {
     display: flex;
     flex-direction: row;
