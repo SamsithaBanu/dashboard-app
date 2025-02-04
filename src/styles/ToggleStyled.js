@@ -27,7 +27,8 @@ export const ToggleStyled = styled.div`
   }
 
   .toggle-option.active {
-    background-color: #5c4efc;
+    // background-color: #5c4efc;
+    background-color: ${(props) => (props?.themeColor ? props?.themeColor : "#4f45e4")};
     color: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   }

@@ -20,7 +20,7 @@ ChartJS.register(
   Legend
 );
 
-const ProgressBar = ({ storage }) => {
+const ProgressBar = ({ storage, themeColor }) => {
   const [modifyChartData, setModifyChartData] = useState(chartData);
 
   useEffect(() => {
@@ -36,19 +36,45 @@ const ProgressBar = ({ storage }) => {
         return updatedChartData;
       });
     } else if (storage === "Light") {
-      setModifyChartData((prevChartData) => {
-        const updatedChartData = {
-          ...prevChartData,
-          datasets: prevChartData.datasets.map((dataset, index) => ({
-            ...dataset,
-            backgroundColor:
-              index === 0 ? "rgba(58, 53, 221, 1)" : "rgba(58, 53, 221, 0.3)",
-          })),
-        };
-        return updatedChartData;
-      });
+      if (themeColor === "green") {
+        setModifyChartData((prevChartData) => {
+          const updatedChartData = {
+            ...prevChartData,
+            datasets: prevChartData.datasets.map((dataset, index) => ({
+              ...dataset,
+              backgroundColor:
+                index === 0 ? "rgba(0, 128, 0, 1)" : "rgba(0, 128, 0, 0.3)",
+            })),
+          };
+          return updatedChartData;
+        });
+      } else if (themeColor === "orange") {
+        setModifyChartData((prevChartData) => {
+          const updatedChartData = {
+            ...prevChartData,
+            datasets: prevChartData.datasets.map((dataset, index) => ({
+              ...dataset,
+              backgroundColor:
+                index === 0 ? "rgba(255, 165, 0, 1)" : "rgba(255, 165, 0, 0.3)",
+            })),
+          };
+          return updatedChartData;
+        });
+      } else {
+        setModifyChartData((prevChartData) => {
+          const updatedChartData = {
+            ...prevChartData,
+            datasets: prevChartData.datasets.map((dataset, index) => ({
+              ...dataset,
+              backgroundColor:
+                index === 0 ? "rgba(58, 53, 221, 1)" : "rgba(58, 53, 221, 0.3)",
+            })),
+          };
+          return updatedChartData;
+        });
+      }
     }
-  }, [chartData, storage]);
+  }, [chartData, storage, themeColor]);
 
   return (
     <div className="middleWrapper">
@@ -60,7 +86,7 @@ const ProgressBar = ({ storage }) => {
           </div>
         </div>
         <div className="progressRight">
-          <Toggle item1="DAILY" item2="WEEKLY" />
+          <Toggle item1="DAILY" item2="WEEKLY" themeColor={themeColor} />
         </div>
       </div>
       <div className="middle">

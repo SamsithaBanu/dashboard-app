@@ -10,16 +10,20 @@ import { AppStyled } from "./styles/AppStyled";
 
 function App() {
   const [storage, setstorage] = useState("");
+  const [themeColor, setThemeColor] = useState("indigo");
   return (
     <AppStyled>
       <div className="appWrapper">
-        <Sidebar />
+        <Sidebar themeColor={themeColor} />
         <div className="rightWrapper">
-          <Header onChange={(item) => setstorage(item)} />
-          <HeaderBelow />
-          <Purchase />
-          <MiddleComponent storage={storage} />
-          <BottomComponent />
+          <Header
+            onChange={(item) => setstorage(item)}
+            themeColor={themeColor}
+          />
+          <HeaderBelow onChange={(item) => setThemeColor(item)} />
+          <Purchase themeColor={themeColor} />
+          <MiddleComponent storage={storage} themeColor={themeColor} />
+          <BottomComponent themeColor={themeColor} />
         </div>
       </div>
     </AppStyled>

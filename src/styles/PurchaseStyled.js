@@ -32,7 +32,7 @@ export const PurchaseStyled = styled.div`
             color: var(--text-color1);
           }
           .amount {
-            color: #4f45e4;
+            color: ${(props) => (props?.themeColor ? props?.themeColor : "#4f45e4")};
             font-weight: 700;
             font-size: 22px;
             span {

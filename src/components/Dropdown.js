@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-const Dropdown = () => {
+const Dropdown = ({ options, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("LAST 30 DAYS");
-
-  const options = ["LAST 7 DAYS", "LAST 30 DAYS", "LAST 90 DAYS"];
+  const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+    onChange(option);
     setIsOpen(false);
   };
 

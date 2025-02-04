@@ -2,13 +2,14 @@ import React from "react";
 import { MiddleComponentStyled } from "../styles/MiddleComponentStyled";
 import ProgressBar from "./ProgressBar";
 import Shipment from "./Shipment";
+import { getThemeColor } from "./data";
 
-const MiddleComponent = ({storage}) => {
+const MiddleComponent = ({ storage, themeColor }) => {
   return (
-    <MiddleComponentStyled>
+    <MiddleComponentStyled themeColor={() => getThemeColor(themeColor)}>
       <div className="middle-wrapper">
-        <ProgressBar storage={storage}/>
-        <Shipment />
+        <ProgressBar storage={storage} themeColor={themeColor} />
+        <Shipment themeColor={themeColor} />
       </div>
     </MiddleComponentStyled>
   );

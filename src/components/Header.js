@@ -1,23 +1,26 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { HeaderStyled } from "../styles/HeaderStyled";
 import bookmark from "../SidebarIcons/HeaderIcons/IconSet.png";
 import search from "../SidebarIcons/HeaderIcons/Search.png";
-import setting from "../SidebarIcons/HeaderIcons/headerSetting.png";
-import book from "../SidebarIcons/HeaderIcons/Vector.png";
-import bell from "../SidebarIcons/HeaderIcons/Bell.png";
 import user from "../SidebarIcons/HeaderIcons/user.png";
+import { getSubThemeColor, getThemeColor } from "./data";
+import { FaRegBell } from "react-icons/fa6";
+import { IoSettingsOutline } from "react-icons/io5";
+import { LuNotebook } from "react-icons/lu";
 
-const Header = ({onChange}) => {
+const Header = ({ onChange, themeColor }) => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
     // localStorage.setItem("theme", theme);
   }, [theme]);
-  console.log('theme', theme)
 
   return (
-    <HeaderStyled>
+    <HeaderStyled
+      themeColor={() => getThemeColor(themeColor)}
+      subThemeColor={() => getSubThemeColor(themeColor)}
+    >
       <div className="leftWrapper">
         <img
           src={bookmark}
@@ -38,28 +41,25 @@ const Header = ({onChange}) => {
         </div>
       </div>
       <div className="rightsideWrapper">
-        <button className='themeMode' onClick={() => {
-          localStorage.setItem('theme',theme === "light" ? "dark" : "light")
-          setTheme(theme === "light" ? "dark" : "light");
-          onChange(theme === "light" ? "Dark" : "Light");
-        }}>
+        <button
+          className="themeMode"
+          onClick={() => {
+            localStorage.setItem("theme", theme === "light" ? "dark" : "light");
+            setTheme(theme === "light" ? "dark" : "light");
+            onChange(theme === "light" ? "Dark" : "Light");
+          }}
+        >
           Switch to {theme === "light" ? "Dark" : "Light"} Mode
         </button>
         <div className="iconWrapper">
-          <img
-            src={book}
-            alt="booking"
-            style={{ width: "23px", height: "23px" }}
+          <LuNotebook
+            style={{ width: "25px", height: "25px", color: "white" }}
           />
-          <img
-            src={bell}
-            alt="notification"
-            style={{ width: "25px", height: "25px" }}
+          <FaRegBell
+            style={{ width: "25px", height: "25px", color: "white" }}
           />
-          <img
-            src={setting}
-            alt="settings"
-            style={{ width: "25px", height: "25px" }}
+          <IoSettingsOutline
+            style={{ width: "25px", height: "25px", color: "white" }}
           />
         </div>
         <div className="userWrapper">

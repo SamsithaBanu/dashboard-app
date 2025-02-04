@@ -12,10 +12,13 @@ import item9 from "../SidebarIcons/icon-park-outline_weixin-market.png";
 import question from "../SidebarIcons/material-symbols_help.png";
 import setting from "../SidebarIcons/Group 121.png";
 import { SidebarStyled } from "../styles/SidebarStyled";
+import { FiBox } from "react-icons/fi";
+import { getThemeColor } from "./data";
+import { BsQuestion } from "react-icons/bs";
 
-const Sidebar = () => {
+const Sidebar = ({ themeColor }) => {
   const menuItems = [
-    { icon: item1, isActive: true },
+    // { icon: FiBox, isActive: true },
     { icon: item2, isActive: false },
     { icon: item3, isActive: false },
     { icon: item4, isActive: false },
@@ -33,6 +36,14 @@ const Sidebar = () => {
         </div>
         <div className="iconsWrapper">
           <div className="top">
+            <div
+              className="boxIcon"
+              style={{ background: `${getThemeColor(themeColor)}` }}
+            >
+              <FiBox
+                style={{ width: "24px", height: "24px", color: "white" }}
+              />
+            </div>
             {menuItems.map((item) => {
               return (
                 <div
@@ -49,11 +60,14 @@ const Sidebar = () => {
             })}
           </div>
           <div className="bottom">
-            <img
-              src={question}
-              alt="question"
-              style={{ width: "24px", height: "24px", marginLeft: "7px" }}
-            />
+            <div
+              className="question"
+              style={{ background: `${getThemeColor(themeColor)}` }}
+            >
+              <BsQuestion
+                style={{ width: "24px", height: "24px", color: "white" }}
+              />
+            </div>
             <hr className="horizontal" />
             <img
               src={setting}

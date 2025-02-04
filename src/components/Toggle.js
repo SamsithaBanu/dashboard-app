@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { ToggleStyled } from "../styles/ToggleStyled";
+import { getThemeColor } from "./data";
 
-const Toggle = ({ item1, item2 }) => {
+const Toggle = ({ item1, item2, themeColor }) => {
   const [selected, setSelected] = useState(item1);
 
   return (
-    <ToggleStyled>
+    <ToggleStyled themeColor={() => getThemeColor(themeColor)}>
       <div className="toggle-switch">
         <button
           className={`toggle-option ${selected === item1 ? "active" : ""}`}

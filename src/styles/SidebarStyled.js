@@ -24,6 +24,18 @@ export const SidebarStyled = styled.div`
       .top {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        margin-top: 6px;
+        .boxIcon{
+          width:30px;
+          height:30px;
+          border-radius:8px;
+          padding:3px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
         .iconWrapper {
           width: 38px;
           height: 38px;
@@ -37,6 +49,16 @@ export const SidebarStyled = styled.div`
       .bottom {
         display: flex;
         flex-direction: column;
+        .question{
+          width:22px;
+          height:22px;
+          border-radius:50%;
+          padding:3px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
         .horizontal {
           width: 35px;
           margin-left: 0px;

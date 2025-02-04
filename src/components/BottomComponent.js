@@ -5,7 +5,7 @@ import Toggle from "./Toggle";
 import map from "../SidebarIcons/shipment/image 9.png";
 import { purchasedItems, soldItems } from "./data";
 
-const BottomComponent = () => {
+const BottomComponent = ({ themeColor }) => {
   return (
     <BottomComponentStyled>
       <div className="leftComponent">
@@ -19,11 +19,20 @@ const BottomComponent = () => {
             alt="map"
             style={{ height: "270px", width: "629px", margin: "5px" }}
           />
-          <Toggle item1="SUPPLIERS" item2="CLIENTS" />
+          <Toggle item1="SUPPLIERS" item2="CLIENTS" themeColor={themeColor} />
         </div>
       </div>
-      <ItemsWrapper title="Top Items Sold" items={soldItems} isFromSold />
-      <ItemsWrapper title="Top Items Purchased" items={purchasedItems} />
+      <ItemsWrapper
+        title="Top Items Sold"
+        items={soldItems}
+        isFromSold
+        themeColor={themeColor}
+      />
+      <ItemsWrapper
+        title="Top Items Purchased"
+        items={purchasedItems}
+        themeColor={themeColor}
+      />
     </BottomComponentStyled>
   );
 };

@@ -136,3 +136,21 @@ export const purchasedItems = [
     units: "₹2,27,459",
   },
 ];
+
+export const getThemeColor = (color) => {
+  if (color === "indigo") {
+    return "#4f45e4";
+  } else {
+    return color;
+  }
+};
+
+export const getSubThemeColor = (color) => {
+  if (color === "indigo") {
+    return "#3830b7";
+  } else if (color === "orange") {
+    return "#F26B0F";
+  } else if (color === "green") {
+    return "#77B254";
+  }
+};

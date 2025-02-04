@@ -5,7 +5,7 @@ export const HeaderStyled = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #4f45e4;
+  background: ${(props) => (props?.themeColor ? props?.themeColor : "#4f45e4")};
   padding: 15px 20px;
   // width:93%;
   // position: fixed;
@@ -17,7 +17,8 @@ export const HeaderStyled = styled.div`
     .searchWrapper {
       display: flex;
       flex-direction: row;
-      background: #3830b7;
+      background: ${(props) =>
+        props?.subThemeColor ? props?.subThemeColor : "#3830b7"};
       width: 362px;
       height: 35px;
       align-items: center;
@@ -44,12 +45,12 @@ export const HeaderStyled = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    .themeMode{
-      border-radius:8px;
+    .themeMode {
+      border-radius: 8px;
       padding: 5px 8px;
       background: white;
       color: black;
-      height:30px;
+      height: 30px;
       border: none;
     }
     .iconWrapper {
@@ -60,7 +61,8 @@ export const HeaderStyled = styled.div`
     .userWrapper {
       display: flex;
       flex-direction: row;
-      background: #3830b7;
+      background: ${(props) =>
+        props?.subThemeColor ? props?.subThemeColor : "#3830b7"};
       border-radius: 8px;
       padding: 8px;
       .detailWrapper {

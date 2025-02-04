@@ -41,16 +41,20 @@ export const HeaderBelowStyled = styled.div`
         font-weight: 600;
         line-height: 13px;
         color: white;
-        background: #4f45e4;
+        background: ${(props) =>
+          props?.themeColor ? props?.themeColor : "#4f45e4"};
         padding: 8px 10px;
         margin-left: 15px;
         margin-top: -12px;
       }
     }
     .dropdownWrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
       .dropdown-container {
         position: relative;
-        width:150px;
+        width: 150px;
       }
 
       .dropdown-header {
@@ -58,20 +62,20 @@ export const HeaderBelowStyled = styled.div`
         justify-content: center;
         align-items: center;
         background-color: white;
-        border: 1px solid #E5E5E5;
+        border: 1px solid #e5e5e5;
         border-radius: 12px;
         padding: 4px 15px;
         cursor: pointer;
         font-size: 12px;
         font-weight: 600;
         color: grey;
-        gap:5px;
+        gap: 5px;
       }
 
       .dropdown-header .arrow {
         font-size: 16px;
         // color: #999;
-        margin-top:5px;
+        margin-top: 5px;
       }
 
       .dropdown-list {
@@ -80,7 +84,7 @@ export const HeaderBelowStyled = styled.div`
         left: 0;
         width: 100%;
         background-color: white;
-        border: 1px solid #E5E5E5;
+        border: 1px solid #e5e5e5;
         border-radius: 8px;
         margin-top: 5px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);

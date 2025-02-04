@@ -1,10 +1,10 @@
 import React from "react";
 import { PurchaseStyled } from "../styles/PurchaseStyled";
-import { purchaseData } from "./data";
+import { getThemeColor, purchaseData } from "./data";
 
-const Purchase = () => {
+const Purchase = ({ themeColor }) => {
   return (
-    <PurchaseStyled>
+    <PurchaseStyled themeColor={() => getThemeColor(themeColor)}>
       <div className="purchaseWrapper">
         {purchaseData.map((item) => {
           return (

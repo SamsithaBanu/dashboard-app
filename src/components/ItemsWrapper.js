@@ -1,7 +1,7 @@
 import React from "react";
 import Toggle from "./Toggle";
 
-const ItemsWrapper = ({ title, items, isFromSold }) => {
+const ItemsWrapper = ({ title, items, isFromSold, themeColor }) => {
   return (
     <div className="itemsWrapper">
       <div className="topItems">
@@ -9,6 +9,7 @@ const ItemsWrapper = ({ title, items, isFromSold }) => {
         <Toggle
           item1={isFromSold ? "VALUE" : "VOL"}
           item2={isFromSold ? "VOL" : "VALUE"}
+          themeColor={themeColor}
         />
       </div>
       <div className="bottomItems">
